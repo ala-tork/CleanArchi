@@ -1,0 +1,8 @@
+@CleanArchi_HostAddress = https://localhost:7042
+
+# GET {{CleanArchi_HostAddress}}/weatherforecast/
+# Accept: application/json
+
+###
+
+GET {{CleanArchi_HostAddress}}/api/Category/GetAll
