@@ -13,6 +13,7 @@ namespace CleanArchi.Core
     {
         public static IServiceCollection AddCoreDI(this IServiceCollection services)
         {
+            
             return services;
         }
     }

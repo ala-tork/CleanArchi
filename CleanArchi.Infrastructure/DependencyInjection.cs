@@ -1,4 +1,5 @@
-﻿using CleanArchi.Core.Interfaces;
+﻿using CleanArchi.Core;
+using CleanArchi.Core.Interfaces;
 using CleanArchi.Infrastructure.Data;
 using CleanArchi.Infrastructure.Repository;
 using CleanArchi.Infrastructure.Services;
@@ -20,7 +21,7 @@ namespace CleanArchi.Infrastructure
             services.AddScoped<IProductService,ProductService>();
             services.AddScoped<IExternalApiRepo , ExternalApiRepo>();
 
-            services.AddAutoMapper(typeof(DependencyInjection).Assembly);
+            services.AddAutoMapper(typeof(AutoMapperProfile));
             services.AddHttpClient<ICoindeskHttpClientService,CoindeskHttpClientService>(op =>
             {
                 op.BaseAddress= new Uri("https://api.coindesk.com/v1/");
