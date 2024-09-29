@@ -1,4 +1,5 @@
-﻿using MediatR.NotificationPublishers;
+﻿using CleanArchi.Core;
+using MediatR.NotificationPublishers;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,7 @@ namespace CleanArchi.Application
     {
         public static IServiceCollection AddApplicationDI(this IServiceCollection services)
         {
+            services.AddAutoMapper(typeof(AutoMapperProfile));
             services.AddMediatR(options =>
             {
                 options.RegisterServicesFromAssembly(typeof(DependencyInjection).Assembly);

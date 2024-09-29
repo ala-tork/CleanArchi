@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace CleanArchi.Infrastructure.Repository
 {
-    internal class CategoryService(AppDbContext _context, IMapper _mapper) : ICategoryService
+    public class CategoryService(AppDbContext _context, IMapper _mapper) : ICategoryService
     {
 
         public async Task<Category> Add(CategoryDto category)
